@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suit1" verbose="1">
+    <test name="myFile">
+        <classes>
+            <class name="FirstTests.FirstTest"></class>>
+        </classes>>
+    </test>
+
+    <test name="param">
+        <parameter name="IDont" value="GG"></parameter>
+        <parameter name="IKnow" value="BG"></parameter>
+
+        <classes>
+            <class name="FirstTests.ThirdTest"></class>>
+        </classes>>
+    </test>
+</suite>
+
