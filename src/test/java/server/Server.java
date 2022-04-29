@@ -12,7 +12,12 @@ import java.util.ArrayList;
 
 public class Server {
     public static void main(String[] args) {
-      int portNum = 4446;
+        //задание вручную порта
+       int portNum = 4446;
+
+        //задание порта автоматически
+        //  int portNum = Integer.parseInt(System.getProperty("ServerPort"));
+        System.out.println(portNum);
 
 
 

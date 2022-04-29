@@ -1,5 +1,5 @@
 package javaSimple;
-
+//передача параметров через классы
 public class ForConstructo {
     public String constParam1;
     public String constParam2;

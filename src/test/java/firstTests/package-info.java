@@ -1,2 +1,2 @@
 // Первые тесты
-package FirstTests;
+package firstTests;

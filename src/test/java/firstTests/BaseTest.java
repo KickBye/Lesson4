@@ -1,4 +1,4 @@
-package FirstTests;
+package firstTests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -14,6 +14,8 @@ public class BaseTest {
     public void afterT(){
         System.out.println("Действия после теста:");
     }
+
+
     @BeforeMethod
     public void beforeM(){
         System.out.println("Действия перед началом метода:");

@@ -3,7 +3,7 @@
 <suite name="Suit1" verbose="1">
     <test name="myFile">
         <classes>
-            <class name="FirstTests.FirstTest"></class>>
+            <class name="firstTests.FirstTest"></class>>
         </classes>>
     </test>
 
@@ -12,7 +12,7 @@
         <parameter name="IKnow" value="BG"></parameter>
 
         <classes>
-            <class name="FirstTests.ThirdTest"></class>>
+            <class name="firstTests.ThirdTest"></class>>
         </classes>>
     </test>
 </suite>

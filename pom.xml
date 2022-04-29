@@ -15,10 +15,9 @@
         <fork.Count>1</fork.Count>
         <version>2.22.2</version>
         <serverPort>4448</serverPort>
-        <suiteXmlFile>src\test\testng.xml</suiteXmlFile>
-
-        <someModule.includes>FirstTests.SecondTest</someModule.includes>
-
+        <suiteXmlFile>src/test/testng.xml</suiteXmlFile>
+        <someModule.includes>firstTests.SecondTest</someModule.includes>
+        <MySuitHome>src/test/java/docHomeTest.xml</MySuitHome>
         <stend.key>stend1</stend.key>
 
     </properties>
@@ -79,16 +78,18 @@
 
     <build>
         <plugins>
+            <!-- мавен плагин !-->
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.22.2</version>
+                            <configuration>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                                    <suiteXmlFile>${MySuitHome}</suiteXmlFile>
+                               </suiteXmlFiles>
 
-      <!--              <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                   </suiteXmlFiles> !-->
 
 
 
@@ -99,15 +100,13 @@
                     </includes>
 
 
-
-
-
-
-
-
+                                <!-- количество потоков!-->
                     <forkCount>${fork.Count}</forkCount>
+                                <!-- будем ли мы переиспользовать джава машины !-->
                     <reuseForks>true</reuseForks>
+                                <!-- можно ли пропускать тесты!-->
                     <skip>false</skip>
+                                <!-- если тест упал то тест идет ли дальше !-->
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectJs.version}/aspectjweaver-${aspectJs.version}.jar"
@@ -119,8 +118,10 @@
                             <name>allure.results.directory</name>
                             <value>${project.build.directory}/allure-results</value>
                         </property>
+
+
                         <property>
-                            <name>serverPort</name>
+                            <name>ServerPort</name>
                             <value>${serverPort}</value>
                         </property>
 

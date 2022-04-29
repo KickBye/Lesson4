@@ -3,7 +3,7 @@
 <suite name="Tests" verbose="1">
     <test name="myDoc">
         <classes>
-            <class name="FirstTests.FourthTest"></class>>
+            <class name="firstTests.FourthTest"></class>>
         </classes>>
     </test>
 
@@ -12,7 +12,7 @@
         <parameter name="params2" value="docValue2"></parameter>
 
         <classes>
-            <class name="FirstTests.FourthTest"></class>>
+            <class name="firstTests.FourthTest"></class>>
         </classes>>
     </test>
 </suite>

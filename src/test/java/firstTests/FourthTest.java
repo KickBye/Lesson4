@@ -1,4 +1,4 @@
-package FirstTests;
+package firstTests;
 
 import javaSimple.ForConstructo;
 import org.testng.annotations.Parameters;

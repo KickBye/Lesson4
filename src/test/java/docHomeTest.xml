@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="MySuitHome" verbose="1">
+    <test name="myFileHome">
+        <parameter name="ParamOne" value="TestValue1"></parameter>
+        <parameter name="ParamTwo" value="TestValue2"></parameter>
+        <classes>
+            <class name="firstTests.HomeTest1"></class>>
+        </classes>>
+    </test>
+</suite>
+
